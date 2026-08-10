@@ -1,0 +1,11 @@
+workflows:
+  default-workflow:
+    name: Flutter Workflow
+    instance_type: mac_mini_m1
+    environment:
+      flutter: stable
+    scripts:
+      - name: Get Flutter packages
+        script: flutter packages get
+      - name: Build Flutter IPA
+        script: flutter build ipa --release
